@@ -7,6 +7,7 @@ using AwesomeNetwork.Data.Repository;
 using AwesomeNetwork.Data.UoW;
 using AwesomeNetwork.Models.Users;
 using AwesomeNetwork.ViewModels.Account;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -78,6 +79,18 @@ namespace AwesomeNetwork.Controllers.Account
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
+        }
+
+        [Authorize]
+        [Route("MyPage")]
+        [HttpGet]
+        public IActionResult MyPage()
+        {
+            var user = User;
+
+            var result = _userManager.GetUserAsync(user);
+
+            return View("User", new UserViewModel(result.Result));
         }
 
     }
