@@ -61,7 +61,7 @@ namespace AwesomeNetwork.Controllers.Account
                     }
                     else
                     {
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("MyPage", "AccountManager");
                     }
                 }
                 else
@@ -86,11 +86,13 @@ namespace AwesomeNetwork.Controllers.Account
         [HttpGet]
         public IActionResult MyPage()
         {
-            var user = User;
+            //var user = User;
 
-            var result = _userManager.GetUserAsync(user);
+            //var result = _userManager.GetUserAsync(user);
 
-            return View("User", new UserViewModel(result.Result));
+            //return View("User", new UserViewModel(result.Result));
+
+            return View("User");
         }
 
     }
