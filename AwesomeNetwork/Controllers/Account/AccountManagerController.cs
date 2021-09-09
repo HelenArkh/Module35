@@ -127,37 +127,48 @@ namespace AwesomeNetwork.Controllers.Account
         }
 
         [Route("UserList")]
-        [HttpGet]
-        public async Task<IActionResult> UserList(string search)
+        [HttpPost]
+        public IActionResult UserList(string search)
         {
-            var model = await CreateSearch(search);
+            var model = new SearchViewModel
+            {
+                UserList = _userManager.Users.AsEnumerable().Where(x => x.GetFullName().ToLower().Contains(search.ToLower())).ToList()
+            };
             return View("UserList", model);
         }
 
-        private async Task<SearchViewModel> CreateSearch(string search)
-        {
-            var currentuser = User;
+        //[Route("UserList")]
+        //[HttpGet]
+        //public async Task<IActionResult> UserList(string search)
+        //{
+        //    var model = await CreateSearch(search);
+        //    return View("UserList", model);
+        //}
 
-            var result = await _userManager.GetUserAsync(currentuser);
+        //private async Task<SearchViewModel> CreateSearch(string search)
+        //{
+        //    var currentuser = User;
 
-            var list = _userManager.Users.AsEnumerable().Where(x => x.GetFullName().ToLower().Contains(search.ToLower())).ToList();
-            var withfriend = await GetAllFriend();
+        //    var result = await _userManager.GetUserAsync(currentuser);
 
-            var data = new List<UserWithFriendExt>();
-            list.ForEach(x =>
-            {
-                var t = _mapper.Map<UserWithFriendExt>(x);
-                t.IsFriendWithCurrent = withfriend.Where(y => y.Id == x.Id || x.Id == result.Id).Count() != 0;
-                data.Add(t);
-            });
+        //    var list = _userManager.Users.AsEnumerable().Where(x => x.GetFullName().ToLower().Contains(search.ToLower())).ToList();
+        //    var withfriend = await GetAllFriend();
 
-            var model = new SearchViewModel()
-            {
-                UserList = data
-            };
+        //    var data = new List<UserWithFriendExt>();
+        //    list.ForEach(x =>
+        //    {
+        //        var t = _mapper.Map<UserWithFriendExt>(x);
+        //        t.IsFriendWithCurrent = withfriend.Where(y => y.Id == x.Id || x.Id == result.Id).Count() != 0;
+        //        data.Add(t);
+        //    });
 
-            return model;
-        }
+        //    var model = new SearchViewModel()
+        //    {
+        //        UserList = data
+        //    };
+
+        //    return model;
+        //}
 
         private async Task<List<User>> GetAllFriend(User user)
         {
