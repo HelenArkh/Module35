@@ -10,6 +10,8 @@ namespace AwesomeNetwork.Data.Repository
     {
         private DbContext _db;
 
+        public DbSet<T> Set { get; private set; }
+
         public Repository(ApplicationDbContext db)
         {
             _db = db;
@@ -20,9 +22,10 @@ namespace AwesomeNetwork.Data.Repository
             throw new NotImplementedException();
         }
 
-        public void Delete(int id)
+        public void Delete(T item)
         {
-            throw new NotImplementedException();
+            Set.Remove(item);
+            _db.SaveChanges();
         }
 
         public T Get(int id)

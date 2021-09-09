@@ -168,3 +168,5 @@ C:\Users\alena\source\repos\Module35\AwesomeNetwork\obj\Debug\netcoreapp3.1\Awes
 C:\Users\alena\source\repos\Module35\AwesomeNetwork\obj\Debug\netcoreapp3.1\AwesomeNetwork.genruntimeconfig.cache
 C:\Users\alena\source\repos\Module35\AwesomeNetwork\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LogoutPartial.cshtml.g.cs
 C:\Users\alena\source\repos\Module35\AwesomeNetwork\obj\Debug\netcoreapp3.1\Razor\Views\AccountManager\User.cshtml.g.cs
+C:\Users\alena\source\repos\Module35\AwesomeNetwork\obj\Debug\netcoreapp3.1\Razor\Views\AccountManager\Edit.cshtml.g.cs
+C:\Users\alena\source\repos\Module35\AwesomeNetwork\obj\Debug\netcoreapp3.1\Razor\Views\AccountManager\UserList.cshtml.g.cs
