@@ -170,3 +170,4 @@ C:\Users\alena\source\repos\Module35\AwesomeNetwork\obj\Debug\netcoreapp3.1\Razo
 C:\Users\alena\source\repos\Module35\AwesomeNetwork\obj\Debug\netcoreapp3.1\Razor\Views\AccountManager\User.cshtml.g.cs
 C:\Users\alena\source\repos\Module35\AwesomeNetwork\obj\Debug\netcoreapp3.1\Razor\Views\AccountManager\Edit.cshtml.g.cs
 C:\Users\alena\source\repos\Module35\AwesomeNetwork\obj\Debug\netcoreapp3.1\Razor\Views\AccountManager\UserList.cshtml.g.cs
+C:\Users\alena\source\repos\Module35\AwesomeNetwork\obj\Debug\netcoreapp3.1\Razor\Views\AccountManager\Chat.cshtml.g.cs

@@ -21,6 +21,7 @@ namespace AwesomeNetwork.Data
             base.OnModelCreating(builder);
 
             builder.ApplyConfiguration<Friend>(new FriendConfiguration());
+            builder.ApplyConfiguration(new MessageConfuiguration());
         }
     }
 }
