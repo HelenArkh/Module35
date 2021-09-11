@@ -15,11 +15,16 @@ namespace AwesomeNetwork.Data.Repository
         public Repository(ApplicationDbContext db)
         {
             _db = db;
+            var set = _db.Set<T>();
+            set.Load();
+
+            Set = set;
         }
 
         public void Create(T item)
         {
-            throw new NotImplementedException();
+            Set.Add(item);
+            _db.SaveChanges();
         }
 
         public void Delete(T item)
@@ -30,17 +35,18 @@ namespace AwesomeNetwork.Data.Repository
 
         public T Get(int id)
         {
-            throw new NotImplementedException();
+            return Set.Find(id);
         }
 
         public IEnumerable<T> GetAll()
         {
-            throw new NotImplementedException();
+            return Set;
         }
 
         public void Update(T item)
         {
-            throw new NotImplementedException();
+            Set.Update(item);
+            _db.SaveChanges();
         }
     }
 }
