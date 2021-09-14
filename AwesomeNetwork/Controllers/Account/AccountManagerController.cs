@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using AwesomeNetwork.Data;
 using AwesomeNetwork.Data.Repository;
 using AwesomeNetwork.Data.UoW;
 using AwesomeNetwork.Extentions;
@@ -145,17 +146,6 @@ namespace AwesomeNetwork.Controllers.Account
                 return View("Edit", model);
             }
         }
-
-        //[Route("UserList")]
-        //[HttpPost]
-        //public IActionResult UserList(string search)
-        //{
-        //    var model = new SearchViewModel
-        //    {
-        //        UserList = _userManager.Users.AsEnumerable().Where(x => x.GetFullName().ToLower().Contains(search.ToLower())).ToList()
-        //    };
-        //    return View("UserList", model);
-        //}
 
         [Route("UserList")]
         [HttpGet]
@@ -321,5 +311,25 @@ namespace AwesomeNetwork.Controllers.Account
             var model = await GenerateChat(id);
             return View("Chat", model);
         }
+
+        [Route("Generate")]
+        [HttpGet]
+        public async Task<IActionResult> Generate()
+        {
+
+            var usergen = new GenetateUsers();
+            var userlist = usergen.Populate(35);
+
+            foreach (var user in userlist)
+            {
+                var result = await _userManager.CreateAsync(user, "123456");
+
+                if (!result.Succeeded)
+                    continue;
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
     }
 }
