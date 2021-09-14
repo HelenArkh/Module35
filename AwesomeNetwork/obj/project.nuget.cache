@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NQkpE5MJVEmvOSimmR/LRgRAXmNGPr5QlROWmzUKDnBrjhODly4aZ+XRa6t8zuG77UJOE6HzqXQ+rWxDMRdZaw==",
+  "dgSpecHash": "WX7nVyGcjdpWCFZBYVR9TpbLuZJwZbnGRxT7CC4G4ROB3zVm39MXNK9IMlEtoh5LJWOPDLni2zkHqM4MwoNBmw==",
   "success": true,
-  "projectFilePath": "H:\\Courses\\C#\\SKILLFACTORY C#\\Projects\\Module35_Project\\Agile_DevelopDima\\AwesomeNetwork\\AwesomeNetwork.csproj",
+  "projectFilePath": "H:\\Courses\\C#\\SKILLFACTORY C#\\Projects\\Module35_Project\\Agile_DevelopDima1\\AwesomeNetwork\\AwesomeNetwork.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dima\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Dima\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

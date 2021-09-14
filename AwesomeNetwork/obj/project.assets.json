@@ -8917,11 +8917,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Courses\\C#\\SKILLFACTORY C#\\Projects\\Module35_Project\\Agile_DevelopDima\\AwesomeNetwork\\AwesomeNetwork.csproj",
+      "projectUniqueName": "H:\\Courses\\C#\\SKILLFACTORY C#\\Projects\\Module35_Project\\Agile_DevelopDima1\\AwesomeNetwork\\AwesomeNetwork.csproj",
       "projectName": "AwesomeNetwork",
-      "projectPath": "H:\\Courses\\C#\\SKILLFACTORY C#\\Projects\\Module35_Project\\Agile_DevelopDima\\AwesomeNetwork\\AwesomeNetwork.csproj",
+      "projectPath": "H:\\Courses\\C#\\SKILLFACTORY C#\\Projects\\Module35_Project\\Agile_DevelopDima1\\AwesomeNetwork\\AwesomeNetwork.csproj",
       "packagesPath": "C:\\Users\\Dima\\.nuget\\packages\\",
-      "outputPath": "H:\\Courses\\C#\\SKILLFACTORY C#\\Projects\\Module35_Project\\Agile_DevelopDima\\AwesomeNetwork\\obj\\",
+      "outputPath": "H:\\Courses\\C#\\SKILLFACTORY C#\\Projects\\Module35_Project\\Agile_DevelopDima1\\AwesomeNetwork\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "G:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
